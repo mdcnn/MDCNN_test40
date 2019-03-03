@@ -12,13 +12,13 @@ import tensorflow.contrib.slim as slim
 # Set parameter for MDCNN's testing
 parser = argparse.ArgumentParser()
 parser.add_argument("--model_name",default="MDCNN_",help="model name")
-parser.add_argument("--data_path",default="/home/zhao/Desktop/MDCNN2018/MDCNN_test40/data/",help="path to the data")# change to be yours
+parser.add_argument("--data_path",default="./data/",help="path to the data")# change to be yours
 parser.add_argument("--input_height",type=int,default=512,help="input height")
 parser.add_argument("--input_width",type=int,default=512,help="input width")
 parser.add_argument("--lowinput_height",type=int,default=256,help="input height")
 parser.add_argument("--lowinput_width",type=int,default=256,help="input width")
 parser.add_argument("--QF",type=float,default=40,help="qualityfactor:low value means low quality")
-parser.add_argument("--log_directory",default="/home/zhao/Desktop/MDCNN2018/MDCNN_test40/tmp/",help="directory to save checkpoints and summaries")# change to be yours
+parser.add_argument("--log_directory",default="./tmp/",help="directory to save checkpoints and summaries")# change to be yours
 args = parser.parse_args()
 
 def conv(x, num_out_layers, kernel_size, stride, activation_fn=None):
